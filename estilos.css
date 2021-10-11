@@ -1,0 +1,90 @@
+/*Variables*/
+:root {
+    --background-color: white;
+    --font-color: black;
+    --font-size-standar: 1.6rem;
+    --image-size: 4rem;
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+/*default*/
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: var(--font-family);
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*Header*/
+header {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 6px;
+}
+
+header nav {
+    width: 280px;
+    display: flex;
+    align-items: center;
+}
+
+header ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    align-items: center;
+}
+
+header li {
+    text-decoration: none;
+}
+
+.header__gmail,
+.header__imagenes {
+    font-size: var(--font-size-standar);
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.header__gmail:hover,
+.header__imagenes:hover {
+    font-size: var(--font-size-standar);
+    text-decoration: underline;
+}
+
+.header__menu,
+.header__profile {
+    width: var(--image-size);
+    padding: 0.9rem;
+    border-radius: 3.6rem;
+}
+
+.header__menu > img,
+.header__profile > img {
+    width: 100%;
+}
+
+
+.header__menu:hover,
+.header__profile:hover,
+.header__menu:active,
+.header__profile:active,
+.header__menu:focus,
+.header__profile:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
