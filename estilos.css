@@ -2,7 +2,8 @@
 :root {
     --background-color: white;
     --font-color: black;
-    --font-size-standar: 1.4rem;
+    --font-size-standar: 1.3rem;
+    --font-size-button: 1.4rem;
     --image-size: 3.6rem;
     --font-family: Arial, Helvetica, sans-serif;
     --transparency: rgba(0, 0, 0, 0.15);
@@ -10,6 +11,8 @@
     --image-opacity: 0.25;
     --footer-color: #f2f2f2;
     --footer-font-color: #70757a;
+    --button-color: #f8f9fa;
+    --button-font-color: #3c4043;
 }
 
 /*default*/
@@ -27,6 +30,7 @@ html {
 body {
     display: flex;
     flex-flow: row wrap;
+    min-height: 100vh;
 }
 
 /*Header*/
@@ -109,7 +113,7 @@ main {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
-    margin: 6px 0;
+    margin: 16px 0;
 }
 
 /*main logo*/
@@ -203,15 +207,62 @@ main {
 }
 
 /*Search buttons*/
+.main__buttons {
+    margin: 16px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
+.buttons {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 3.6rem;
+}
+
+.main__buttons button {
+    height: 100%;
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
+    margin: 0 1.2rem;
+    background-color: var(--button-color);
+    border: none;
+    color: var(--button-font-color);
+    font-size: var(--font-size-button);
+}
+
+.main__buttons button:focus,
+.main__buttons button:hover,
+.main__buttons button:active {
+    box-shadow: 0 0 4px var(--transparency);
+}
+
+/*"Ofrecido por google en: idiomas"*/
+.main__languages {
+    margin: 16px 0;
+    font-size: var(--font-size-standar);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    flex-grow: 1;
+}
+
+.main__languages > p {
+    text-align: center;
+}
 
 /*footer*/
 footer {
-    position: fixed;
-    bottom: 0px;
     display: flex;
     flex-flow: row wrap;
     width: 100%;
+    align-self: flex-end;
 }
 
 .footer__country {
@@ -224,7 +275,7 @@ footer {
 }
 
 .footer__country > p {
-    font-size: var(--font-size-standar);
+    font-size: var(--font-size-button);
     padding-left: 3.6rem;
     color: var(--footer-font-color);
 }
@@ -277,7 +328,7 @@ footer {
 }
 
 .footer__about a {
-    font-size: var(--font-size-standar);
+    font-size: var(--font-size-button);
     text-decoration: none;
     color: var(--footer-font-color);
 }
